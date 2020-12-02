@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2020.Puzzles
 {
-    interface IPuzzle
+    public interface IPuzzle
     {
         Solution Solve();
     }

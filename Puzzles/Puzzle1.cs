@@ -1,53 +1,63 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace AdventOfCode2020.Puzzles
+﻿namespace AdventOfCode2020.Puzzles
 {
     public class Puzzle1 : IPuzzle
     {
         private static string Solve1()
         {
-            var allNumbers = new List<int>();
-
             var input = Puzzle1Input.Input;
 
             for (int outer = 0; outer < input.Length; outer++)
             {
                 for (int inner = input.Length - 1; inner >= 0; inner--)
                 {
-                    if (input[inner] == input[outer])
+                    if (inner == outer)
                     {
                         continue;
                     }
 
                     if (input[inner] + input[outer] == 2020)
                     {
-                        allNumbers.Add(input[inner] * input[outer]);
+                        return (input[inner] * input[outer]).ToString();
+                    }
+                }
+            }
 
-                        if (allNumbers.Count == 2)
+            return string.Empty;
+        }
+
+        private static string Solve2()
+        {
+            var input = Puzzle1Input.Input;
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                for (int j = 0; j < input.Length; j++)
+                {
+                    for (int k = 0; k < input.Length; k++)
+                    {
+                        if (i == j && j == k)
                         {
-                            break;
+                            continue;
+                        }
+
+                        if ((input[i] + input[j] + input[k]) == 2020)
+                        {
+                            return (input[i] * input[j] * input[k]).ToString();
                         }
                     }
                 }
             }
 
-            return allNumbers.Aggregate((x, y) => x * y).ToString();
-        }
-
-        private static string Solve2()
-        {
-            throw new NotImplementedException();
+            return string.Empty;
         }
 
         Solution IPuzzle.Solve()
         {
             return new Solution
-            {
-                Part1 = Solve1(),
-                Part2 = Solve2(),
-            };
+            (
+                Solve1(),
+                Solve2()
+            );
         }
     }
 }

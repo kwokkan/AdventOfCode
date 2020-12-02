@@ -1,8 +1,8 @@
 ﻿namespace AdventOfCode2020.Puzzles
 {
-    public static class Puzzle1Input
+    internal static class Puzzle1Input
     {
-        public static readonly int[] Input = new[]
+        internal readonly static int[] Input = new[]
         {
             1826,
             1895,

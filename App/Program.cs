@@ -1,4 +1,5 @@
 ﻿using System;
+using AdventOfCode2020.Puzzles;
 
 namespace App
 {
@@ -6,7 +7,11 @@ namespace App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IPuzzle puzzle= new Puzzle1();
+            var solution = puzzle.Solve();
+
+            Console.WriteLine("Advent of code 2020");
+            Console.WriteLine(solution);
         }
     }
 }
