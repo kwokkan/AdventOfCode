@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>AdventOfCode2020.Puzzles</AssemblyName>
+    <RootNamespace>AdventOfCode2020.Puzzles</RootNamespace>
+	<Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
