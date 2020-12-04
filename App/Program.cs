@@ -7,7 +7,7 @@ namespace App
     {
         static void Main(string[] args)
         {
-            IPuzzle puzzle= new Puzzle3();
+            IPuzzle puzzle= new Puzzle4();
             var solution = puzzle.Solve();
 
             Console.WriteLine("Advent of code 2020");
