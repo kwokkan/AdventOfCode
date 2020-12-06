@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles", "Puzzles\Puzzles.csproj", "{ACB8F88C-FF5F-4D73-9DBF-96753362E6E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{3B2A24F0-0840-41C1-809E-449D3FC5A23E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App", "App\App.csproj", "{3B2A24F0-0840-41C1-809E-449D3FC5A23E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles.Tests", "Puzzles.Tests\Puzzles.Tests.csproj", "{BB2FE072-901D-4A67-9723-37C780F8632F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3B2A24F0-0840-41C1-809E-449D3FC5A23E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B2A24F0-0840-41C1-809E-449D3FC5A23E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B2A24F0-0840-41C1-809E-449D3FC5A23E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB2FE072-901D-4A67-9723-37C780F8632F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB2FE072-901D-4A67-9723-37C780F8632F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB2FE072-901D-4A67-9723-37C780F8632F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB2FE072-901D-4A67-9723-37C780F8632F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
