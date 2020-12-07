@@ -20,13 +20,17 @@ namespace AdventOfCode2020.Puzzles
 
         private static IEnumerable<Bag> GetBags(string[] lines)
         {
-            foreach (var line in lines)
+            for (int i = 0; i < lines.Length; i++)
             {
-                var replacedLine = line
+                lines[i] = lines[i]
                     .Replace(" bags", "")
                     .Replace(" bag", "")
                     .Replace(".", "");
-                var bagLines = replacedLine.Split(" contain ");
+            }
+
+            foreach (var line in lines)
+            {
+                var bagLines = line.Split(" contain ");
 
                 var bag = new Bag(bagLines[0]);
 
@@ -61,15 +65,14 @@ namespace AdventOfCode2020.Puzzles
             }
         }
 
-        private static void GetChildBags(IEnumerable<Bag> bags, List<KeyValuePair<string, int>> allBags, params Bag[] parentBags)
+        private static void GetChildBags(IEnumerable<Bag> bags, List<string> allBags, params Bag[] parentBags)
         {
             foreach (var bag in parentBags)
             {
-                allBags.Add(KeyValuePair.Create(bag.Colour, 1));
+                allBags.Add(bag.Colour);
 
                 var subBags = bag.Bags
-                    .SelectMany(x => Enumerable.Repeat(bags.Where(b => b.Colour == x.Key).ToArray(), x.Value))
-                    .SelectMany(x => x)
+                    .SelectMany(x => Enumerable.Repeat(bags.First(b => b.Colour == x.Key), x.Value))
                     .ToArray();
 
                 GetChildBags(bags, allBags, subBags);
@@ -78,7 +81,7 @@ namespace AdventOfCode2020.Puzzles
 
         private static string Solve1()
         {
-            var bags = GetBags(Puzzle7Input.Input);
+            var bags = GetBags(Puzzle7Input.Input).ToList();
             var foundColours = new HashSet<string>();
 
             GetParentBags(bags, foundColours, "shiny gold");
@@ -88,14 +91,13 @@ namespace AdventOfCode2020.Puzzles
 
         private static string Solve2()
         {
-            var bags = GetBags(Puzzle7Input.Input);
-            var foundColours = new List<KeyValuePair<string, int>>();
+            var bags = GetBags(Puzzle7Input.Input).ToList();
+            var foundColours = new List<string>();
             var startingBag = bags.Where(x => x.Colour == "shiny gold").ToArray();
 
             GetChildBags(bags, foundColours, startingBag);
 
-            // > 136, < 30900
-            return (foundColours.Select(x => x.Value).Sum() - startingBag.Count()).ToString();
+            return (foundColours.Count - startingBag.Length).ToString();
         }
 
         Solution IPuzzle.Solve()
