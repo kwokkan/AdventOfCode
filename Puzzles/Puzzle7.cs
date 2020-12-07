@@ -65,17 +65,21 @@ namespace AdventOfCode2020.Puzzles
             }
         }
 
-        private static void GetChildBags(IEnumerable<Bag> bags, List<string> allBags, params Bag[] parentBags)
+        private static void GetChildBags(IEnumerable<Bag> bags, ref int counter, params Bag[] parentBags)
         {
             foreach (var bag in parentBags)
             {
-                allBags.Add(bag.Colour);
+                counter++;
 
-                var subBags = bag.Bags
-                    .SelectMany(x => Enumerable.Repeat(bags.First(b => b.Colour == x.Key), x.Value))
-                    .ToArray();
+                foreach (var subBag in bag.Bags)
+                {
+                    var repeatBag = bags.First(b => b.Colour == subBag.Key);
 
-                GetChildBags(bags, allBags, subBags);
+                    for (int i = 0; i < subBag.Value; i++)
+                    {
+                        GetChildBags(bags, ref counter, repeatBag);
+                    }
+                }
             }
         }
 
@@ -92,12 +96,12 @@ namespace AdventOfCode2020.Puzzles
         private static string Solve2()
         {
             var bags = GetBags(Puzzle7Input.Input).ToList();
-            var foundColours = new List<string>();
+            var foundColours = 0;
             var startingBag = bags.Where(x => x.Colour == "shiny gold").ToArray();
 
-            GetChildBags(bags, foundColours, startingBag);
+            GetChildBags(bags, ref foundColours, startingBag);
 
-            return (foundColours.Count - startingBag.Length).ToString();
+            return (foundColours - startingBag.Length).ToString();
         }
 
         Solution IPuzzle.Solve()

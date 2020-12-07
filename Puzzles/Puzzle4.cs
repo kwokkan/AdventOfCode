@@ -8,6 +8,9 @@ namespace AdventOfCode2020.Puzzles
     {
         private record Passport
         {
+            private readonly static Regex HclRegex = new Regex("#[a-f0-9]{6}");
+            private readonly static Regex PidRegex = new Regex("^\\d{9}$");
+
             private IList<string> Fields { get; init; } = new List<string>();
             private IList<string> Values { get; init; } = new List<string>();
 
@@ -81,9 +84,7 @@ namespace AdventOfCode2020.Puzzles
                             }
                         case "hcl":
                             {
-                                var regex = new Regex("#[a-f0-9]{6}");
-
-                                if (!regex.IsMatch(currentValue))
+                                if (!HclRegex.IsMatch(currentValue))
                                 {
                                     return false;
                                 }
@@ -112,9 +113,7 @@ namespace AdventOfCode2020.Puzzles
                             }
                         case "pid":
                             {
-                                var regex = new Regex("^\\d{9}$");
-
-                                if (!regex.IsMatch(currentValue))
+                                if (!PidRegex.IsMatch(currentValue))
                                 {
                                     return false;
                                 }
@@ -165,7 +164,7 @@ namespace AdventOfCode2020.Puzzles
 
         private static string Solve1()
         {
-            var passports = GetPassports(Puzzle4Input.Input);
+            var passports = GetPassports(Puzzle4Input.Input).ToList();
             var count = 0;
 
             foreach (var passport in passports)
@@ -181,7 +180,7 @@ namespace AdventOfCode2020.Puzzles
 
         private static string Solve2()
         {
-            var passports = GetPassports(Puzzle4Input.Input);
+            var passports = GetPassports(Puzzle4Input.Input).ToList();
             var count = 0;
 
             foreach (var passport in passports)

@@ -32,7 +32,7 @@ namespace AdventOfCode2020.Puzzles
 
         private static string Solve1()
         {
-            var policies = GetPolicies(Puzzle2Input.Input);
+            var policies = GetPolicies(Puzzle2Input.Input).ToList();
             var count = 0;
 
             foreach (var policy in policies)
@@ -50,7 +50,7 @@ namespace AdventOfCode2020.Puzzles
 
         private static string Solve2()
         {
-            var policies = GetPolicies(Puzzle2Input.Input);
+            var policies = GetPolicies(Puzzle2Input.Input).ToList();
             var count = 0;
 
             foreach (var policy in policies)

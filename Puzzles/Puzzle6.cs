@@ -36,14 +36,14 @@ namespace AdventOfCode2020.Puzzles
 
         private static string Solve1()
         {
-            var groups = GetGroups(Puzzle6Input.Input);
+            var groups = GetGroups(Puzzle6Input.Input).ToList();
             var allSum = 0;
 
             foreach (var group in groups)
             {
-                var distinctGroup = group.Answers.Distinct().ToList();
+                var distinctGroup = group.Answers.Distinct().Count();
 
-                allSum += distinctGroup.Count;
+                allSum += distinctGroup;
             }
 
             return allSum.ToString();
@@ -51,19 +51,17 @@ namespace AdventOfCode2020.Puzzles
 
         private static string Solve2()
         {
-            var groups = GetGroups(Puzzle6Input.Input);
+            var groups = GetGroups(Puzzle6Input.Input).ToList();
             var allSum = 0;
 
             foreach (var group in groups)
             {
-                var currentAnswers = new List<bool>();
                 var groupedAnswers = group.Answers
                     .GroupBy(x => x)
                     .Select( x => new { Answer = x, Count = x.Count() })
-                    .Where(x => x.Count == group.Count)
-                    .ToArray();
+                    .Count(x => x.Count == group.Count);
 
-                allSum += groupedAnswers.Count();
+                allSum += groupedAnswers;
             }
 
             return allSum.ToString();
