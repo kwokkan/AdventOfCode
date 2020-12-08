@@ -162,7 +162,7 @@ namespace AdventOfCode2020.Puzzles
             yield return new Passport(allFields, allValues);
         }
 
-        private static string Solve1()
+        private static long Solve1()
         {
             var passports = GetPassports(Puzzle4Input.Input).ToList();
             var count = 0;
@@ -175,10 +175,10 @@ namespace AdventOfCode2020.Puzzles
                 }
             }
 
-            return count.ToString();
+            return count;
         }
 
-        private static string Solve2()
+        private static long Solve2()
         {
             var passports = GetPassports(Puzzle4Input.Input).ToList();
             var count = 0;
@@ -191,7 +191,7 @@ namespace AdventOfCode2020.Puzzles
                 }
             }
 
-            return count.ToString();
+            return count;
         }
 
         Solution IPuzzle.Solve()

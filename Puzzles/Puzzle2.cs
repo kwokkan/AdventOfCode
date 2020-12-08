@@ -30,7 +30,7 @@ namespace AdventOfCode2020.Puzzles
             }
         }
 
-        private static string Solve1()
+        private static long Solve1()
         {
             var policies = GetPolicies(Puzzle2Input.Input).ToList();
             var count = 0;
@@ -45,10 +45,10 @@ namespace AdventOfCode2020.Puzzles
                 }
             }
 
-            return count.ToString();
+            return count;
         }
 
-        private static string Solve2()
+        private static long Solve2()
         {
             var policies = GetPolicies(Puzzle2Input.Input).ToList();
             var count = 0;
@@ -64,7 +64,7 @@ namespace AdventOfCode2020.Puzzles
                 }
             }
 
-            return count.ToString();
+            return count;
         }
 
         Solution IPuzzle.Solve()

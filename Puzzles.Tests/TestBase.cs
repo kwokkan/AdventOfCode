@@ -7,11 +7,11 @@ namespace AdventOfCode2020.Puzzles.Tests
     {
         protected readonly IPuzzle Puzzle;
 
-        private readonly int? _expectedSample;
-        private readonly string _expectedAnswer1;
-        private readonly string _expectedAnswer2;
+        private readonly long? _expectedSample;
+        private readonly long _expectedAnswer1;
+        private readonly long _expectedAnswer2;
 
-        public TestBase(string expectedAnswer1, string expectedAnswer2)
+        public TestBase(long expectedAnswer1, long expectedAnswer2)
         {
             Puzzle = new TPuzzle();
 
@@ -19,7 +19,7 @@ namespace AdventOfCode2020.Puzzles.Tests
             _expectedAnswer2 = expectedAnswer2;
         }
 
-        public TestBase(int expectedSample, string expectedAnswer1, string expectedAnswer2)
+        public TestBase(int expectedSample, long expectedAnswer1, long expectedAnswer2)
             : this(expectedAnswer1, expectedAnswer2)
         {
             _expectedSample = expectedSample;
@@ -36,12 +36,10 @@ namespace AdventOfCode2020.Puzzles.Tests
             }
 
             Assert.Equal(_expectedAnswer1, solution.Part1);
-            Assert.NotNull(solution.Part1);
-            Assert.NotEmpty(solution.Part1);
+            Assert.NotEqual(default, solution.Part1);
 
             Assert.Equal(_expectedAnswer2, solution.Part2);
-            Assert.NotNull(solution.Part2);
-            Assert.NotEmpty(solution.Part2);
+            Assert.NotEqual(default, solution.Part2);
         }
     }
 }

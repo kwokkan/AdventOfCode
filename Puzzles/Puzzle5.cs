@@ -27,7 +27,7 @@ namespace AdventOfCode2020.Puzzles
             return allNumbers[0];
         }
 
-        private static string Solve1()
+        private static long Solve1()
         {
             var seats = Puzzle5Input.Input;
             var maxSeat = 0;
@@ -45,10 +45,10 @@ namespace AdventOfCode2020.Puzzles
                 }
             }
 
-            return maxSeat.ToString();
+            return maxSeat;
         }
 
-        private static string Solve2()
+        private static long Solve2()
         {
             var seats = Puzzle5Input.Input;
             var allSeats = new List<int>();
@@ -79,7 +79,7 @@ namespace AdventOfCode2020.Puzzles
                 }
             }
 
-            return foundSeat.ToString();
+            return foundSeat;
         }
 
         Solution IPuzzle.Solve()

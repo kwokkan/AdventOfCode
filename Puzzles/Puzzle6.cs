@@ -34,7 +34,7 @@ namespace AdventOfCode2020.Puzzles
             yield return group;
         }
 
-        private static string Solve1()
+        private static long Solve1()
         {
             var groups = GetGroups(Puzzle6Input.Input).ToList();
             var allSum = 0;
@@ -46,10 +46,10 @@ namespace AdventOfCode2020.Puzzles
                 allSum += distinctGroup;
             }
 
-            return allSum.ToString();
+            return allSum;
         }
 
-        private static string Solve2()
+        private static long Solve2()
         {
             var groups = GetGroups(Puzzle6Input.Input).ToList();
             var allSum = 0;
@@ -64,7 +64,7 @@ namespace AdventOfCode2020.Puzzles
                 allSum += groupedAnswers;
             }
 
-            return allSum.ToString();
+            return allSum;
         }
 
         Solution IPuzzle.Solve()

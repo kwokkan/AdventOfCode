@@ -29,14 +29,14 @@ namespace AdventOfCode2020.Puzzles
             return count;
         }
 
-        private static string Solve1()
+        private static long Solve1()
         {
             var count = GetCount(3, 1);
 
-            return count.ToString();
+            return count;
         }
 
-        private static string Solve2()
+        private static long Solve2()
         {
             var counts = new List<long>
             {
@@ -47,7 +47,7 @@ namespace AdventOfCode2020.Puzzles
                 GetCount(1, 2),
             };
 
-            return counts.Aggregate((x, y) => x * y).ToString();
+            return counts.Aggregate((x, y) => x * y);
         }
 
         Solution IPuzzle.Solve()

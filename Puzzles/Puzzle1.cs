@@ -2,12 +2,12 @@
 {
     public class Puzzle1 : IPuzzle
     {
-        private static int Sample()
+        private static long Sample()
         {
-            return int.Parse(Solve1(Puzzle1Input.Sample));
+            return Solve1(Puzzle1Input.Sample);
         }
 
-        private static string Solve1(int[]? data = null)
+        private static long Solve1(int[]? data = null)
         {
             var input = data ?? Puzzle1Input.Input;
 
@@ -22,15 +22,15 @@
 
                     if (input[inner] + input[outer] == 2020)
                     {
-                        return (input[inner] * input[outer]).ToString();
+                        return (input[inner] * input[outer]);
                     }
                 }
             }
 
-            return string.Empty;
+            return default;
         }
 
-        private static string Solve2()
+        private static long Solve2()
         {
             var input = Puzzle1Input.Input;
 
@@ -47,13 +47,13 @@
 
                         if ((input[i] + input[j] + input[k]) == 2020)
                         {
-                            return (input[i] * input[j] * input[k]).ToString();
+                            return input[i] * input[j] * input[k];
                         }
                     }
                 }
             }
 
-            return string.Empty;
+            return default;
         }
 
         Solution IPuzzle.Solve()

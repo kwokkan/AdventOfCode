@@ -83,17 +83,17 @@ namespace AdventOfCode2020.Puzzles
             }
         }
 
-        private static string Solve1()
+        private static long Solve1()
         {
             var bags = GetBags(Puzzle7Input.Input).ToList();
             var foundColours = new HashSet<string>();
 
             GetParentBags(bags, foundColours, "shiny gold");
 
-            return foundColours.Count.ToString();
+            return foundColours.Count;
         }
 
-        private static string Solve2()
+        private static long Solve2()
         {
             var bags = GetBags(Puzzle7Input.Input).ToList();
             var foundColours = 0;
@@ -101,7 +101,7 @@ namespace AdventOfCode2020.Puzzles
 
             GetChildBags(bags, ref foundColours, startingBag);
 
-            return (foundColours - startingBag.Length).ToString();
+            return foundColours - startingBag.Length;
         }
 
         Solution IPuzzle.Solve()

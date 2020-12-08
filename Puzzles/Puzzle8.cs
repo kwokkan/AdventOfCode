@@ -22,12 +22,12 @@ namespace AdventOfCode2020.Puzzles
             }
         }
 
-        private static int Sample()
+        private static long Sample()
         {
-            return int.Parse(Solve1(Puzzle8Input.Sample));
+            return Solve1(Puzzle8Input.Sample);
         }
 
-        private static string Solve1(string[]? data = null)
+        private static long Solve1(string[]? data = null)
         {
             var operations = GetOperations(data ?? Puzzle8Input.Input).ToList();
 
@@ -60,10 +60,10 @@ namespace AdventOfCode2020.Puzzles
                 }
             }
 
-            return sum.ToString();
+            return sum;
         }
 
-        private static string Solve2()
+        private static long Solve2()
         {
             var operationCount = GetOperations(Puzzle8Input.Input).Count();
 
@@ -127,7 +127,7 @@ namespace AdventOfCode2020.Puzzles
                 }
             }
 
-            return sum.ToString();
+            return sum;
         }
 
         Solution IPuzzle.Solve()

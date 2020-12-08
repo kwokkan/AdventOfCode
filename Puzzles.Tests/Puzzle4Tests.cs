@@ -3,7 +3,7 @@
     public class Puzzle4Tests : TestBase<Puzzle4>
     {
         public Puzzle4Tests()
-            : base("216", "150")
+            : base(216, 150)
         {
         }
     }
