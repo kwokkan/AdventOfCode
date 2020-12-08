@@ -2,9 +2,14 @@
 {
     public class Puzzle1 : IPuzzle
     {
-        private static string Solve1()
+        private static int Sample()
         {
-            var input = Puzzle1Input.Input;
+            return int.Parse(Solve1(Puzzle1Input.Sample));
+        }
+
+        private static string Solve1(int[]? data = null)
+        {
+            var input = data ?? Puzzle1Input.Input;
 
             for (int outer = 0; outer < input.Length; outer++)
             {
@@ -55,6 +60,7 @@
         {
             return new Solution
             (
+                Sample(),
                 Solve1(),
                 Solve2()
             );

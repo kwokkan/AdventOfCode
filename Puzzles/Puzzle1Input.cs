@@ -2,6 +2,16 @@
 {
     internal static class Puzzle1Input
     {
+        internal readonly static int[] Sample = new int[]
+        {
+            1721,
+            979,
+            366,
+            299,
+            675,
+            1456,
+        };
+
         internal readonly static int[] Input = new[]
         {
             1826,

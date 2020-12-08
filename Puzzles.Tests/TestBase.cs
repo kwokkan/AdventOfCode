@@ -7,6 +7,7 @@ namespace AdventOfCode2020.Puzzles.Tests
     {
         protected readonly IPuzzle Puzzle;
 
+        private readonly int? _expectedSample;
         private readonly string _expectedAnswer1;
         private readonly string _expectedAnswer2;
 
@@ -18,10 +19,21 @@ namespace AdventOfCode2020.Puzzles.Tests
             _expectedAnswer2 = expectedAnswer2;
         }
 
+        public TestBase(int expectedSample, string expectedAnswer1, string expectedAnswer2)
+            : this(expectedAnswer1, expectedAnswer2)
+        {
+            _expectedSample = expectedSample;
+        }
+
         [Fact]
         public void Solution()
         {
             var solution = Puzzle.Solve();
+
+            if (_expectedSample.HasValue)
+            {
+                Assert.Equal(_expectedSample, solution.Sample);
+            }
 
             Assert.Equal(_expectedAnswer1, solution.Part1);
             Assert.NotNull(solution.Part1);

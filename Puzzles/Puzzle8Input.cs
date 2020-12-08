@@ -2,6 +2,19 @@
 {
     internal static class Puzzle8Input
     {
+        internal readonly static string[] Sample = new string[]
+        {
+            "nop +0",
+            "acc +1",
+            "jmp +4",
+            "acc +3",
+            "jmp -3",
+            "acc -99",
+            "acc +1",
+            "jmp -4",
+            "acc +6",
+        };
+
         internal readonly static string[] Input = new string[]
         {
             "acc +6",

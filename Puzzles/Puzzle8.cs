@@ -22,9 +22,14 @@ namespace AdventOfCode2020.Puzzles
             }
         }
 
-        private static string Solve1()
+        private static int Sample()
         {
-            var operations = GetOperations(Puzzle8Input.Input).ToList();
+            return int.Parse(Solve1(Puzzle8Input.Sample));
+        }
+
+        private static string Solve1(string[]? data = null)
+        {
+            var operations = GetOperations(data ?? Puzzle8Input.Input).ToList();
 
             var usedIndexes = new HashSet<int>();
             var sum = 0;
@@ -129,6 +134,7 @@ namespace AdventOfCode2020.Puzzles
         {
             return new Solution
             (
+                Sample(),
                 Solve1(),
                 Solve2()
             );
