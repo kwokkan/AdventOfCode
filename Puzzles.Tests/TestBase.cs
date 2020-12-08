@@ -23,13 +23,13 @@ namespace AdventOfCode2020.Puzzles.Tests
         {
             var solution = Puzzle.Solve();
 
+            Assert.Equal(_expectedAnswer1, solution.Part1);
             Assert.NotNull(solution.Part1);
             Assert.NotEmpty(solution.Part1);
-            Assert.Equal(_expectedAnswer1, solution.Part1);
 
+            Assert.Equal(_expectedAnswer2, solution.Part2);
             Assert.NotNull(solution.Part2);
             Assert.NotEmpty(solution.Part2);
-            Assert.Equal(_expectedAnswer2, solution.Part2);
         }
     }
 }
