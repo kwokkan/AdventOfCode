@@ -1,13 +1,13 @@
 ﻿namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle1 : IPuzzle
+    public class Puzzle1 : PuzzleBase, IPuzzle
     {
-        private static long Sample()
+        private static long SampleInternal()
         {
-            return Solve1(Puzzle1Input.Sample);
+            return Solve1Internal(Puzzle1Input.Sample);
         }
 
-        private static long Solve1(int[]? data = null)
+        private static long Solve1Internal(int[]? data = null)
         {
             var input = data ?? Puzzle1Input.Input;
 
@@ -30,7 +30,7 @@
             return default;
         }
 
-        private static long Solve2()
+        private static long Solve2Internal()
         {
             var input = Puzzle1Input.Input;
 
@@ -54,6 +54,21 @@
             }
 
             return default;
+        }
+
+        public override long Sample()
+        {
+            return SampleInternal();
+        }
+
+        public override long Solve1()
+        {
+            return Solve1Internal();
+        }
+
+        public override long Solve2()
+        {
+            return Solve2Internal();
         }
 
         Solution IPuzzle.Solve()

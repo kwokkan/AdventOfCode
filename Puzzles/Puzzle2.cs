@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle2 : IPuzzle
+    public class Puzzle2 : PuzzleBase, IPuzzle
     {
         private record PasswordPolicy
         {
@@ -30,7 +30,7 @@ namespace AdventOfCode2020.Puzzles
             }
         }
 
-        private static long Solve1()
+        private static long Solve1Internal()
         {
             var policies = GetPolicies(Puzzle2Input.Input).ToList();
             var count = 0;
@@ -48,7 +48,7 @@ namespace AdventOfCode2020.Puzzles
             return count;
         }
 
-        private static long Solve2()
+        private static long Solve2Internal()
         {
             var policies = GetPolicies(Puzzle2Input.Input).ToList();
             var count = 0;
@@ -67,12 +67,22 @@ namespace AdventOfCode2020.Puzzles
             return count;
         }
 
+        public override long Solve1()
+        {
+            return Solve1Internal();
+        }
+
+        public override long Solve2()
+        {
+            return Solve2Internal();
+        }
+
         Solution IPuzzle.Solve()
         {
             return new Solution
             (
-                Solve1(),
-                Solve2()
+                Solve1Internal(),
+                Solve2Internal()
             );
         }
     }
