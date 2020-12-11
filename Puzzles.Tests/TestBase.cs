@@ -84,6 +84,7 @@ namespace AdventOfCode2020.Puzzles.Tests
             var answer = Puzzle.Solve1();
 
             Assert.Equal(_expectedAnswer1, answer);
+            Assert.NotEqual(default, _expectedAnswer1);
         }
 
         [Fact]
@@ -92,6 +93,7 @@ namespace AdventOfCode2020.Puzzles.Tests
             var answer = Puzzle.Solve2();
 
             Assert.Equal(_expectedAnswer2, answer);
+            Assert.NotEqual(default, _expectedAnswer2);
         }
     }
 }
