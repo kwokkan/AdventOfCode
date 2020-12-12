@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle18 : PuzzleBase, IPuzzle
+    public class Puzzle18 : PuzzleBase
     {
         public override long Sample()
         {
@@ -25,16 +25,6 @@ namespace AdventOfCode2020.Puzzles
             var input = Puzzle18Input.Input;
 
             return default;
-        }
-
-        Solution IPuzzle.Solve()
-        {
-            return new Solution
-            (
-                Sample(),
-                Solve1(),
-                Solve2()
-            );
         }
     }
 }

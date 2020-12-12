@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle3 : PuzzleBase, IPuzzle
+    public class Puzzle3 : PuzzleBase
     {
         private static int GetCount(int right, int down)
         {
@@ -48,15 +48,6 @@ namespace AdventOfCode2020.Puzzles
             };
 
             return counts.Aggregate((x, y) => x * y);
-        }
-
-        Solution IPuzzle.Solve()
-        {
-            return new Solution
-            (
-                Solve1(),
-                Solve2()
-            );
         }
     }
 }

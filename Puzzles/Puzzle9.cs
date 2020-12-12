@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle9 : PuzzleBase, IPuzzle
+    public class Puzzle9 : PuzzleBase
     {
         private static bool HasSum(IList<long> values, long sum)
         {
@@ -104,16 +104,6 @@ namespace AdventOfCode2020.Puzzles
             }
 
             return sum;
-        }
-
-        Solution IPuzzle.Solve()
-        {
-            return new Solution
-            (
-                Sample(),
-                Solve1(),
-                Solve2()
-            );
         }
     }
 }

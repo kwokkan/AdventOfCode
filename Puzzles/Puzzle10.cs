@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle10 : PuzzleBase, IPuzzle
+    public class Puzzle10 : PuzzleBase
     {
         private static (int, int, int) GetJolts(int[] input)
         {
@@ -172,16 +172,6 @@ namespace AdventOfCode2020.Puzzles
             }
 
             return d;
-        }
-
-        Solution IPuzzle.Solve()
-        {
-            return new Solution
-            (
-                Sample(),
-                Solve1(),
-                Solve2()
-            );
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle5 : PuzzleBase, IPuzzle
+    public class Puzzle5 : PuzzleBase
     {
         private static int GetBinary(params bool[] pos)
         {
@@ -80,15 +80,6 @@ namespace AdventOfCode2020.Puzzles
             }
 
             return foundSeat;
-        }
-
-        Solution IPuzzle.Solve()
-        {
-            return new Solution
-            (
-                Solve1(),
-                Solve2()
-            );
         }
     }
 }

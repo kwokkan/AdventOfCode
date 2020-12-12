@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle6 : PuzzleBase, IPuzzle
+    public class Puzzle6 : PuzzleBase
     {
         private record Group
         {
@@ -65,15 +65,6 @@ namespace AdventOfCode2020.Puzzles
             }
 
             return allSum;
-        }
-
-        Solution IPuzzle.Solve()
-        {
-            return new Solution
-            (
-                Solve1(),
-                Solve2()
-            );
         }
     }
 }

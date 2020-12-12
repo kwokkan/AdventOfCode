@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle2 : PuzzleBase, IPuzzle
+    public class Puzzle2 : PuzzleBase
     {
         private record PasswordPolicy
         {
@@ -75,15 +75,6 @@ namespace AdventOfCode2020.Puzzles
         public override long Solve2()
         {
             return Solve2Internal();
-        }
-
-        Solution IPuzzle.Solve()
-        {
-            return new Solution
-            (
-                Solve1Internal(),
-                Solve2Internal()
-            );
         }
     }
 }

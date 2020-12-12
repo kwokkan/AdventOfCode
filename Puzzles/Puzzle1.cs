@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle1 : PuzzleBase, IPuzzle
+    public class Puzzle1 : PuzzleBase
     {
         private static long SampleInternal()
         {
@@ -69,16 +69,6 @@
         public override long Solve2()
         {
             return Solve2Internal();
-        }
-
-        Solution IPuzzle.Solve()
-        {
-            return new Solution
-            (
-                Sample(),
-                Solve1(),
-                Solve2()
-            );
         }
     }
 }

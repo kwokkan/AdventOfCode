@@ -7,11 +7,17 @@ namespace App
     {
         static void Main(string[] args)
         {
-            IPuzzle puzzle= new Puzzle8();
-            var solution = puzzle.Solve();
+            var solution = GetSolution();
 
             Console.WriteLine("Advent of code 2020");
             Console.WriteLine(solution);
+        }
+
+        private static (long Sample, long Solution1, long Solution2) GetSolution()
+        {
+            var puzzle = new Puzzle12();
+
+            return (puzzle.Sample(), puzzle.Solve1(), puzzle.Solve2());
         }
     }
 }

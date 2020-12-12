@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle7 : PuzzleBase, IPuzzle
+    public class Puzzle7 : PuzzleBase
     {
         private record Bag
         {
@@ -102,15 +102,6 @@ namespace AdventOfCode2020.Puzzles
             GetChildBags(bags, ref foundColours, startingBag);
 
             return foundColours - startingBag.Length;
-        }
-
-        Solution IPuzzle.Solve()
-        {
-            return new Solution
-            (
-                Solve1(),
-                Solve2()
-            );
         }
     }
 }

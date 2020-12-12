@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle11 : PuzzleBase, IPuzzle
+    public class Puzzle11 : PuzzleBase
     {
         private readonly static IReadOnlyList<(int x, int y)> _matrix = new List<(int x, int y)>
         {
@@ -251,16 +251,6 @@ namespace AdventOfCode2020.Puzzles
             var flipCount = GetChangeCount(seats, 5, false);
 
             return flipCount;
-        }
-
-        Solution IPuzzle.Solve()
-        {
-            return new Solution
-            (
-                Sample(),
-                Solve1(),
-                Solve2()
-            );
         }
     }
 }

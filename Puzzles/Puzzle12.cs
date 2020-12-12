@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle12 : PuzzleBase, IPuzzle
+    public class Puzzle12 : PuzzleBase
     {
         private record Point
         {
@@ -211,16 +211,6 @@ namespace AdventOfCode2020.Puzzles
             var destination = RunInstructionsWithWaypoint(instructions);
 
             return Math.Abs(destination.x) + Math.Abs(destination.y);
-        }
-
-        Solution IPuzzle.Solve()
-        {
-            return new Solution
-            (
-                Sample(),
-                Solve1(),
-                Solve2()
-            );
         }
     }
 }
