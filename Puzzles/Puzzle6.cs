@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle6 : IPuzzle
+    public class Puzzle6 : PuzzleBase, IPuzzle
     {
         private record Group
         {
@@ -34,7 +34,7 @@ namespace AdventOfCode2020.Puzzles
             yield return group;
         }
 
-        private static long Solve1()
+        public override long Solve1()
         {
             var groups = GetGroups(Puzzle6Input.Input).ToList();
             var allSum = 0;
@@ -49,7 +49,7 @@ namespace AdventOfCode2020.Puzzles
             return allSum;
         }
 
-        private static long Solve2()
+        public override long Solve2()
         {
             var groups = GetGroups(Puzzle6Input.Input).ToList();
             var allSum = 0;
@@ -58,7 +58,7 @@ namespace AdventOfCode2020.Puzzles
             {
                 var groupedAnswers = group.Answers
                     .GroupBy(x => x)
-                    .Select( x => new { Answer = x, Count = x.Count() })
+                    .Select(x => new { Answer = x, Count = x.Count() })
                     .Count(x => x.Count == group.Count);
 
                 allSum += groupedAnswers;

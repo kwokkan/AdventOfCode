@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle9 : IPuzzle
+    public class Puzzle9 : PuzzleBase, IPuzzle
     {
         private static bool HasSum(IList<long> values, long sum)
         {
@@ -51,19 +51,19 @@ namespace AdventOfCode2020.Puzzles
             return earliest;
         }
 
-        private static long Sample()
+        public override long Sample()
         {
             return GetEarliest(Puzzle9Input.Sample, 5);
         }
 
-        private static long Solve1()
+        public override long Solve1()
         {
             var earliest = GetEarliest(Puzzle9Input.Input, 25);
 
             return earliest;
         }
 
-        private static long Solve2()
+        public override long Solve2()
         {
             var earliest = GetEarliest(Puzzle9Input.Input, 25);
 

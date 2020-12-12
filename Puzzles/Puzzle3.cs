@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle3 : IPuzzle
+    public class Puzzle3 : PuzzleBase, IPuzzle
     {
         private static int GetCount(int right, int down)
         {
@@ -29,14 +29,14 @@ namespace AdventOfCode2020.Puzzles
             return count;
         }
 
-        private static long Solve1()
+        public override long Solve1()
         {
             var count = GetCount(3, 1);
 
             return count;
         }
 
-        private static long Solve2()
+        public override long Solve2()
         {
             var counts = new List<long>
             {

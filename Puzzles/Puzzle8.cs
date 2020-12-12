@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle8 : IPuzzle
+    public class Puzzle8 : PuzzleBase, IPuzzle
     {
         private record Operation
         {
@@ -22,12 +22,7 @@ namespace AdventOfCode2020.Puzzles
             }
         }
 
-        private static long Sample()
-        {
-            return Solve1(Puzzle8Input.Sample);
-        }
-
-        private static long Solve1(string[]? data = null)
+        private static long Solve1Internal(string[]? data)
         {
             var operations = GetOperations(data ?? Puzzle8Input.Input).ToList();
 
@@ -63,7 +58,17 @@ namespace AdventOfCode2020.Puzzles
             return sum;
         }
 
-        private static long Solve2()
+        public override long Sample()
+        {
+            return Solve1Internal(Puzzle8Input.Sample);
+        }
+
+        public override long Solve1()
+        {
+            return Solve1Internal(Puzzle8Input.Input);
+        }
+
+        public override long Solve2()
         {
             var operationCount = GetOperations(Puzzle8Input.Input).Count();
 

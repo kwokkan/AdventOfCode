@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle4 : IPuzzle
+    public class Puzzle4 : PuzzleBase, IPuzzle
     {
         private record Passport
         {
@@ -162,7 +162,7 @@ namespace AdventOfCode2020.Puzzles
             yield return new Passport(allFields, allValues);
         }
 
-        private static long Solve1()
+        public override long Solve1()
         {
             var passports = GetPassports(Puzzle4Input.Input).ToList();
             var count = 0;
@@ -178,7 +178,7 @@ namespace AdventOfCode2020.Puzzles
             return count;
         }
 
-        private static long Solve2()
+        public override long Solve2()
         {
             var passports = GetPassports(Puzzle4Input.Input).ToList();
             var count = 0;

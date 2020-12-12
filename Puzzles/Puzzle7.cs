@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Puzzle7 : IPuzzle
+    public class Puzzle7 : PuzzleBase, IPuzzle
     {
         private record Bag
         {
@@ -83,7 +83,7 @@ namespace AdventOfCode2020.Puzzles
             }
         }
 
-        private static long Solve1()
+        public override long Solve1()
         {
             var bags = GetBags(Puzzle7Input.Input).ToList();
             var foundColours = new HashSet<string>();
@@ -93,7 +93,7 @@ namespace AdventOfCode2020.Puzzles
             return foundColours.Count;
         }
 
-        private static long Solve2()
+        public override long Solve2()
         {
             var bags = GetBags(Puzzle7Input.Input).ToList();
             var foundColours = 0;
