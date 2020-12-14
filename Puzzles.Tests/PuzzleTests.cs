@@ -1,5 +1,13 @@
 ﻿namespace AdventOfCode2020.Puzzles.Tests
 {
+    public class Puzzle13Tests : TestBase<Puzzle13>
+    {
+        public Puzzle13Tests()
+            : base(295, 104, 0)
+        {
+        }
+    }
+
     public class Puzzle14Tests : TestBase<Puzzle14>
     {
         public Puzzle14Tests()
