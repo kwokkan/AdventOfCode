@@ -11,7 +11,7 @@
     public class Puzzle14Tests : TestBase<Puzzle14>
     {
         public Puzzle14Tests()
-            : base(0, 0)
+            : base(165, 15919415426101, 0)
         {
         }
     }
