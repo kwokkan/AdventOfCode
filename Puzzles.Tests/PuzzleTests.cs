@@ -43,7 +43,7 @@
     public class Puzzle18Tests : TestBase<Puzzle18>
     {
         public Puzzle18Tests()
-            : base(0, 0)
+            : base(51, 3348222486398, 43423343619505)
         {
         }
     }
