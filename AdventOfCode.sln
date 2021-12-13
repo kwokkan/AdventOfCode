@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2021.Tests", "tests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuzzleCore", "src\PuzzleCore\PuzzleCore.csproj", "{F19C407D-C87D-466B-B326-34E9BDDF2F89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuzzleTestCore", "tests\PuzzleTestCore\PuzzleTestCore.csproj", "{FD20A2A2-ABB3-4387-AF55-C6F8A55E6EAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{F19C407D-C87D-466B-B326-34E9BDDF2F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F19C407D-C87D-466B-B326-34E9BDDF2F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F19C407D-C87D-466B-B326-34E9BDDF2F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD20A2A2-ABB3-4387-AF55-C6F8A55E6EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD20A2A2-ABB3-4387-AF55-C6F8A55E6EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD20A2A2-ABB3-4387-AF55-C6F8A55E6EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD20A2A2-ABB3-4387-AF55-C6F8A55E6EAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{74F49226-5551-4F63-AFE6-7EDBD1C53CF6} = {36E85DD1-BFAC-4B51-8979-E4E8ADA75F2E}
 		{8B3DC42E-8A06-418C-8E29-9B19F7DFDD8F} = {80624DF6-412D-439C-B324-D894A15931DA}
 		{F19C407D-C87D-466B-B326-34E9BDDF2F89} = {36E85DD1-BFAC-4B51-8979-E4E8ADA75F2E}
+		{FD20A2A2-ABB3-4387-AF55-C6F8A55E6EAC} = {80624DF6-412D-439C-B324-D894A15931DA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B037CFAA-2F0D-4237-AA30-0DEC68DC03CD}

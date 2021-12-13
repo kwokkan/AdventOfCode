@@ -1,7 +1,7 @@
 ﻿using AdventOfCode.PuzzleCore;
 using Xunit;
 
-namespace AdventOfCode2020.Puzzles.Tests
+namespace AdventOfCode.PuzzleTestCore
 {
     public abstract class TestBase<TPuzzleBase>
         where TPuzzleBase : PuzzleBase, new()

@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Puzzles\Puzzles.csproj" />
     <ProjectReference Include="..\src\PuzzleCore\PuzzleCore.csproj" />
+    <ProjectReference Include="..\tests\PuzzleTestCore\PuzzleTestCore.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -18,7 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\PuzzleCore\PuzzleCore.csproj" />
     <ProjectReference Include="..\..\src\Puzzles2021\Puzzles2021.csproj" />
+    <ProjectReference Include="..\PuzzleTestCore\PuzzleTestCore.csproj" />
   </ItemGroup>
 
 </Project>
