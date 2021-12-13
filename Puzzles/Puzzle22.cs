@@ -99,7 +99,7 @@ namespace AdventOfCode2020.Puzzles
             }
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             var game = GetGame(Puzzle22Input.Sample);
             PlayGame(game);

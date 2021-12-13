@@ -5,7 +5,7 @@ namespace AdventOfCode2020.Puzzles.Tests
     public class Puzzle13Tests : TestBase<Puzzle13>
     {
         public Puzzle13Tests()
-            : base(295, 104, 0)
+            : base(295, null, 104, 0)
         {
         }
     }
@@ -13,7 +13,7 @@ namespace AdventOfCode2020.Puzzles.Tests
     public class Puzzle14Tests : TestBase<Puzzle14>
     {
         public Puzzle14Tests()
-            : base(165, 15919415426101, 0)
+            : base(165, null, 15919415426101, 0)
         {
         }
     }
@@ -21,7 +21,7 @@ namespace AdventOfCode2020.Puzzles.Tests
     public class Puzzle15Tests : TestBase<Puzzle15>
     {
         public Puzzle15Tests()
-            : base(436, 639, 266)
+            : base(436, null, 639, 266)
         {
         }
     }
@@ -29,7 +29,7 @@ namespace AdventOfCode2020.Puzzles.Tests
     public class Puzzle16Tests : TestBase<Puzzle16>
     {
         public Puzzle16Tests()
-            : base(71, 20048, 0)
+            : base(71, null, 20048, 0)
         {
         }
     }
@@ -45,7 +45,7 @@ namespace AdventOfCode2020.Puzzles.Tests
     public class Puzzle18Tests : TestBase<Puzzle18>
     {
         public Puzzle18Tests()
-            : base(51, 3348222486398, 43423343619505)
+            : base(51, null, 3348222486398, 43423343619505)
         {
         }
     }
@@ -77,7 +77,7 @@ namespace AdventOfCode2020.Puzzles.Tests
     public class Puzzle22Tests : TestBase<Puzzle22>
     {
         public Puzzle22Tests()
-            : base(306, 35005, 0)
+            : base(306, null, 35005, 0)
         {
         }
     }

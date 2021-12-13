@@ -52,7 +52,7 @@ namespace AdventOfCode2020.Puzzles
             return earliest;
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             return GetEarliest(Puzzle9Input.Sample, 5);
         }

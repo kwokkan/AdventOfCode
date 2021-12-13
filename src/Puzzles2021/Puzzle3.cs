@@ -139,11 +139,18 @@ namespace AdventOfCode.Puzzles2021
             return oxygen * co2;
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             var input = GetSampleString();
 
             return Calculate1(input);
+        }
+
+        public override long Sample2()
+        {
+            var input = GetSampleString();
+
+            return Calculate2(input);
         }
 
         public override long Solve1()

@@ -58,7 +58,7 @@ namespace AdventOfCode2020.Puzzles
             return default;
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             return SampleInternal();
         }

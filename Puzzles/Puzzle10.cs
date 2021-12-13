@@ -84,7 +84,7 @@ namespace AdventOfCode2020.Puzzles
             yield return (prev, count);
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             var jolts = GetJolts(Puzzle10Input.Sample);
 

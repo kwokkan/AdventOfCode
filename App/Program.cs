@@ -17,7 +17,7 @@ namespace App
         {
             var puzzle = new Puzzle12();
 
-            return (puzzle.Sample(), puzzle.Solve1(), puzzle.Solve2());
+            return (puzzle.Sample1(), puzzle.Solve1(), puzzle.Solve2());
         }
     }
 }

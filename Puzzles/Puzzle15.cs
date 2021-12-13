@@ -64,7 +64,7 @@ namespace AdventOfCode2020.Puzzles
             return prevNumber;
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             var number = GetNthNumber(Puzzle15Input.Sample, 2020);
 

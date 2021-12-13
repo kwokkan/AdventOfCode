@@ -46,7 +46,7 @@ namespace AdventOfCode.Puzzles2021
             return count;
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             var input = InputAs(GetSampleString());
 

@@ -7,7 +7,7 @@ namespace AdventOfCode2020.Puzzles
 {
     public class Puzzle19 : PuzzleBase
     {
-        public override long Sample()
+        public override long Sample1()
         {
             var input = Puzzle19Input.Sample;
 

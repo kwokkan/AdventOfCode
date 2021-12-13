@@ -190,7 +190,7 @@ namespace AdventOfCode2020.Puzzles
             return (ship.X, ship.Y);
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             var instructions = GetInstructions(Puzzle12Input.Sample).ToArray();
             var destination = RunInstructions(instructions);

@@ -230,7 +230,7 @@ namespace AdventOfCode2020.Puzzles
             yield return (prev, count);
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             var seats = GetPaddedSeats(Puzzle11Input.Sample);
             var flipCount = GetChangeCount(seats, 4, true);

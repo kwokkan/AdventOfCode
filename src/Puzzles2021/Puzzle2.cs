@@ -90,7 +90,7 @@ namespace AdventOfCode.Puzzles2021
             return x * z;
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             var input = InputAs(GetSampleString());
 

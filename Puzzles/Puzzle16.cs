@@ -125,7 +125,7 @@ namespace AdventOfCode2020.Puzzles
             return sum;
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             var ticket = GetTicket(Puzzle16Input.Sample);
             var invalid = DetermineInvalid(ticket);

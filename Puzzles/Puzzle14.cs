@@ -86,7 +86,7 @@ namespace AdventOfCode2020.Puzzles
             return memValues.Values.Sum();
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             var programs = GetPrograms(Puzzle14Input.Sample).ToArray();
             var sum = ApplyMasks(programs);

@@ -98,7 +98,7 @@ namespace AdventOfCode2020.Puzzles
             }
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             var timeTable = GetTimeTable(Puzzle13Input.Sample);
             var earliest = GetEarliest(timeTable);

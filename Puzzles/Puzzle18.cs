@@ -104,7 +104,7 @@ namespace AdventOfCode2020.Puzzles
             return total;
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             var input = Puzzle18Input.Sample;
             var total = GetTotal(input, false);

@@ -59,7 +59,7 @@ namespace AdventOfCode2020.Puzzles
             return sum;
         }
 
-        public override long Sample()
+        public override long Sample1()
         {
             return Solve1Internal(Puzzle8Input.Sample);
         }

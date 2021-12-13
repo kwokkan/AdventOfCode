@@ -48,9 +48,14 @@
             return GetFile(_day, "input");
         }
 
-        public virtual long Sample()
+        public virtual long Sample1()
         {
-            throw new NotImplementedException($"{nameof(Sample)} not implemented.");
+            throw new NotImplementedException($"{nameof(Sample1)} not implemented.");
+        }
+
+        public virtual long Sample2()
+        {
+            throw new NotImplementedException($"{nameof(Sample2)} not implemented.");
         }
 
         public virtual long Solve1()
