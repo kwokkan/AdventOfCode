@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>AdventOfCode2020.Puzzles.Tests</AssemblyName>
     <RootNamespace>AdventOfCode2020.Puzzles.Tests</RootNamespace>
   </PropertyGroup>
@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Puzzles\Puzzles.csproj" />
+    <ProjectReference Include="..\src\PuzzleCore\PuzzleCore.csproj" />
   </ItemGroup>
 
 </Project>

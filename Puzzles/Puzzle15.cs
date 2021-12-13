@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using AdventOfCode.PuzzleCore;
 
 namespace AdventOfCode2020.Puzzles
 {

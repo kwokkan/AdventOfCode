@@ -1,4 +1,6 @@
-﻿namespace AdventOfCode2020.Puzzles
+﻿using AdventOfCode.PuzzleCore;
+
+namespace AdventOfCode2020.Puzzles
 {
     public class Puzzle1 : PuzzleBase
     {

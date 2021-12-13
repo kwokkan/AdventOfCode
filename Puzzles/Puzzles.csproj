@@ -1,10 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>AdventOfCode2020.Puzzles</AssemblyName>
     <RootNamespace>AdventOfCode2020.Puzzles</RootNamespace>
 	<Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\PuzzleCore\PuzzleCore.csproj" />
+  </ItemGroup>
 
 </Project>

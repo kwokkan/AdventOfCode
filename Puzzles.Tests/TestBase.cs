@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using AdventOfCode.PuzzleCore;
+using Xunit;
 
 namespace AdventOfCode2020.Puzzles.Tests
 {
