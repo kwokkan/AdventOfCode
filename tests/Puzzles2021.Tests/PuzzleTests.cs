@@ -5,7 +5,7 @@ namespace AdventOfCode.Puzzles2021.Tests
     public class Puzzle1Tests : TestBase<Puzzle1>
     {
         public Puzzle1Tests()
-            : base(7, null, 1681, 1704)
+            : base(7, 5, 1681, 1704)
         {
         }
     }
@@ -13,7 +13,7 @@ namespace AdventOfCode.Puzzles2021.Tests
     public class Puzzle2Tests : TestBase<Puzzle2>
     {
         public Puzzle2Tests()
-            : base(150, null, 1383564, 1488311643)
+            : base(150, 900, 1383564, 1488311643)
         {
         }
     }

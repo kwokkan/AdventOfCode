@@ -53,6 +53,13 @@ namespace AdventOfCode.Puzzles2021
             return Calculate(input, 1);
         }
 
+        public override long Sample2()
+        {
+            var input = InputAs(GetSampleString());
+
+            return Calculate(input, 3);
+        }
+
         public override long Solve1()
         {
             var input = InputAs(GetInputString());
