@@ -25,4 +25,12 @@ namespace AdventOfCode.Puzzles2021.Tests
         {
         }
     }
+
+    public class Puzzle4Tests : TestBase<Puzzle4>
+    {
+        public Puzzle4Tests()
+            : base(4512, 1924, 5685, 21070)
+        {
+        }
+    }
 }

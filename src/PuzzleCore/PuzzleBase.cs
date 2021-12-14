@@ -5,7 +5,7 @@
         private readonly int _year;
         private readonly int _day;
 
-        private static string[] GetFile(int day, string type)
+        private static string[] GetFile(int day, string type, bool appendBlankLine = false)
         {
             var path = $"inputs/{day}-{type}.txt";
 
@@ -25,6 +25,11 @@
                 lines.Add(line);
             }
 
+            if (appendBlankLine)
+            {
+                lines.Add(string.Empty);
+            }
+
             return lines.ToArray();
         }
 
@@ -38,14 +43,14 @@
             _day = day;
         }
 
-        protected string[] GetSampleString()
+        protected string[] GetSampleString(bool appendBlankLine = false)
         {
-            return GetFile(_day, "sample");
+            return GetFile(_day, "sample", appendBlankLine: appendBlankLine);
         }
 
-        protected string[] GetInputString()
+        protected string[] GetInputString(bool appendBlankLine = false)
         {
-            return GetFile(_day, "input");
+            return GetFile(_day, "input", appendBlankLine: appendBlankLine);
         }
 
         public virtual long Sample1()
