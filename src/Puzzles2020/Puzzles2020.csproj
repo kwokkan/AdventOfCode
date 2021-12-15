@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <AssemblyName>AdventOfCode2020.Puzzles</AssemblyName>
-    <RootNamespace>AdventOfCode2020.Puzzles</RootNamespace>
+    <AssemblyName>AdventOfCode.Puzzles2020</AssemblyName>
+    <RootNamespace>AdventOfCode.Puzzles2020</RootNamespace>
 	<Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\PuzzleCore\PuzzleCore.csproj" />
+    <ProjectReference Include="..\PuzzleCore\PuzzleCore.csproj" />
   </ItemGroup>
 
 </Project>

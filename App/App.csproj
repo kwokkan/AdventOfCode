@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Puzzles\Puzzles.csproj" />
+    <ProjectReference Include="..\src\Puzzles2020\Puzzles2020.csproj" />
   </ItemGroup>
 
 </Project>

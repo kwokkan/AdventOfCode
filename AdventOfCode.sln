@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles", "Puzzles\Puzzles.csproj", "{ACB8F88C-FF5F-4D73-9DBF-96753362E6E8}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App", "App\App.csproj", "{3B2A24F0-0840-41C1-809E-449D3FC5A23E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles.Tests", "Puzzles.Tests\Puzzles.Tests.csproj", "{BB2FE072-901D-4A67-9723-37C780F8632F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2021", "src\Puzzles2021\Puzzles2021.csproj", "{74F49226-5551-4F63-AFE6-7EDBD1C53CF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2021", "src\Puzzles2021\Puzzles2021.csproj", "{74F49226-5551-4F63-AFE6-7EDBD1C53CF6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36E85DD1-BFAC-4B51-8979-E4E8ADA75F2E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{80624DF6-412D-439C-B324-D894A15931DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2021.Tests", "tests\Puzzles2021.Tests\Puzzles2021.Tests.csproj", "{8B3DC42E-8A06-418C-8E29-9B19F7DFDD8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2021.Tests", "tests\Puzzles2021.Tests\Puzzles2021.Tests.csproj", "{8B3DC42E-8A06-418C-8E29-9B19F7DFDD8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuzzleCore", "src\PuzzleCore\PuzzleCore.csproj", "{F19C407D-C87D-466B-B326-34E9BDDF2F89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuzzleCore", "src\PuzzleCore\PuzzleCore.csproj", "{F19C407D-C87D-466B-B326-34E9BDDF2F89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PuzzleTestCore", "tests\PuzzleTestCore\PuzzleTestCore.csproj", "{FD20A2A2-ABB3-4387-AF55-C6F8A55E6EAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PuzzleTestCore", "tests\PuzzleTestCore\PuzzleTestCore.csproj", "{FD20A2A2-ABB3-4387-AF55-C6F8A55E6EAC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2020", "src\Puzzles2020\Puzzles2020.csproj", "{E116A245-DC8D-4F68-9278-437F7EA7070C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2020.Tests", "tests\Puzzles2020.Tests\Puzzles2020.Tests.csproj", "{07DD50D8-87E4-435C-9BC2-1D4556403EFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,18 +27,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ACB8F88C-FF5F-4D73-9DBF-96753362E6E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACB8F88C-FF5F-4D73-9DBF-96753362E6E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACB8F88C-FF5F-4D73-9DBF-96753362E6E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACB8F88C-FF5F-4D73-9DBF-96753362E6E8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B2A24F0-0840-41C1-809E-449D3FC5A23E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B2A24F0-0840-41C1-809E-449D3FC5A23E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B2A24F0-0840-41C1-809E-449D3FC5A23E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B2A24F0-0840-41C1-809E-449D3FC5A23E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB2FE072-901D-4A67-9723-37C780F8632F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB2FE072-901D-4A67-9723-37C780F8632F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB2FE072-901D-4A67-9723-37C780F8632F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB2FE072-901D-4A67-9723-37C780F8632F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{74F49226-5551-4F63-AFE6-7EDBD1C53CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74F49226-5551-4F63-AFE6-7EDBD1C53CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74F49226-5551-4F63-AFE6-7EDBD1C53CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -55,6 +47,14 @@ Global
 		{FD20A2A2-ABB3-4387-AF55-C6F8A55E6EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD20A2A2-ABB3-4387-AF55-C6F8A55E6EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD20A2A2-ABB3-4387-AF55-C6F8A55E6EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E116A245-DC8D-4F68-9278-437F7EA7070C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E116A245-DC8D-4F68-9278-437F7EA7070C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E116A245-DC8D-4F68-9278-437F7EA7070C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E116A245-DC8D-4F68-9278-437F7EA7070C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07DD50D8-87E4-435C-9BC2-1D4556403EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07DD50D8-87E4-435C-9BC2-1D4556403EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07DD50D8-87E4-435C-9BC2-1D4556403EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07DD50D8-87E4-435C-9BC2-1D4556403EFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +64,8 @@ Global
 		{8B3DC42E-8A06-418C-8E29-9B19F7DFDD8F} = {80624DF6-412D-439C-B324-D894A15931DA}
 		{F19C407D-C87D-466B-B326-34E9BDDF2F89} = {36E85DD1-BFAC-4B51-8979-E4E8ADA75F2E}
 		{FD20A2A2-ABB3-4387-AF55-C6F8A55E6EAC} = {80624DF6-412D-439C-B324-D894A15931DA}
+		{E116A245-DC8D-4F68-9278-437F7EA7070C} = {36E85DD1-BFAC-4B51-8979-E4E8ADA75F2E}
+		{07DD50D8-87E4-435C-9BC2-1D4556403EFB} = {80624DF6-412D-439C-B324-D894A15931DA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B037CFAA-2F0D-4237-AA30-0DEC68DC03CD}
