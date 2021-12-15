@@ -34,18 +34,6 @@ namespace AdventOfCode.PuzzleTestCore
             {
                 var result = action();
 
-                if (result.Actual == default)
-                {
-                    throw new SkipException("Not implemented.");
-                }
-
-                Assert.Equal(result.Expected, result.Actual);
-
-                if (!result.Expected.HasValue || result.Expected.Value == default)
-                {
-                    throw new SkipException("Not implemented.");
-                }
-
                 Assert.Equal(result.Expected, result.Actual);
             }
             catch (NotImplementedException ex)

@@ -101,12 +101,5 @@ namespace AdventOfCode.Puzzles2020
 
             return sum;
         }
-
-        public override long Solve2()
-        {
-            var input = Puzzle14Input.Input;
-
-            return default;
-        }
     }
 }

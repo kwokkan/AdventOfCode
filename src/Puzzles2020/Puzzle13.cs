@@ -106,6 +106,14 @@ namespace AdventOfCode.Puzzles2020
             return earliest;
         }
 
+        public override long Sample2()
+        {
+            var timetable = GetTimeTable(Puzzle13Input.Sample);
+            var earliest = GetEarliestOffset(timetable);
+
+            return earliest;
+        }
+
         public override long Solve1()
         {
             var timeTable = GetTimeTable(Puzzle13Input.Input);
@@ -114,12 +122,13 @@ namespace AdventOfCode.Puzzles2020
             return earliest;
         }
 
-        public override long Solve2()
+        //TODO: Optimise
+        /*public override long Solve2()
         {
-            var timetable = GetTimeTable(Puzzle13Input.Sample);
+            var timetable = GetTimeTable(Puzzle13Input.Input);
             var earliest = GetEarliestOffset(timetable);
 
             return earliest;
-        }
+        }*/
     }
 }
