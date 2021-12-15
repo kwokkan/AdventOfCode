@@ -1,6 +1,6 @@
 ﻿using AdventOfCode.PuzzleTestCore;
 
-namespace AdventOfCode2020.Puzzles.Tests
+namespace AdventOfCode.Puzzles2020.Tests
 {
     public class Puzzle9Tests : TestBase<Puzzle9>
     {

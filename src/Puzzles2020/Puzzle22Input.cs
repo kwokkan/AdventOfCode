@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2020.Puzzles
+﻿namespace AdventOfCode.Puzzles2020
 {
     internal static class Puzzle22Input
     {

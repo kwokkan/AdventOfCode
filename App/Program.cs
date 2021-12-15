@@ -1,5 +1,5 @@
 ﻿using System;
-using AdventOfCode2020.Puzzles;
+using AdventOfCode.Puzzles2020;
 
 namespace App
 {

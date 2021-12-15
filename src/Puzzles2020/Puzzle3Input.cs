@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventOfCode2020.Puzzles
+namespace AdventOfCode.Puzzles2020
 {
     internal static class Puzzle3Input
     {

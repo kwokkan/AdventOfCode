@@ -1,6 +1,6 @@
 ﻿using AdventOfCode.PuzzleCore;
 
-namespace AdventOfCode2020.Puzzles
+namespace AdventOfCode.Puzzles2020
 {
     public class Puzzle1 : PuzzleBase
     {

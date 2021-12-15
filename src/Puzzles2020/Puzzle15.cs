@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using AdventOfCode.PuzzleCore;
 
-namespace AdventOfCode2020.Puzzles
+namespace AdventOfCode.Puzzles2020
 {
     public class Puzzle15 : PuzzleBase
     {

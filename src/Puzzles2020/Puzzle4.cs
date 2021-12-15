@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using AdventOfCode.PuzzleCore;
 
-namespace AdventOfCode2020.Puzzles
+namespace AdventOfCode.Puzzles2020
 {
     public class Puzzle4 : PuzzleBase
     {
