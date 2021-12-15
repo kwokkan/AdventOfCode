@@ -34,7 +34,7 @@ namespace AdventOfCode.PuzzleTestCore
             {
                 var result = action();
 
-                if (!result.Expected.HasValue || result.Expected.Value == default)
+                if (result.Actual == default || !result.Expected.HasValue || result.Expected.Value == default)
                 {
                     throw new SkipException("Not implemented.");
                 }
