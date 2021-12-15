@@ -28,11 +28,18 @@ namespace AdventOfCode.PuzzleTestCore
             _expectedSample2 = expectedSample2;
         }
 
-        private static void Run(Action action)
+        private static void Run(Func<(long? Expected, long Actual)> action)
         {
             try
             {
-                action();
+                var result = action();
+
+                if (!result.Expected.HasValue || result.Expected.Value == default)
+                {
+                    throw new SkipException("Not implemented.");
+                }
+
+                Assert.Equal(result.Expected, result.Actual);
             }
             catch (NotImplementedException ex)
             {
@@ -40,55 +47,39 @@ namespace AdventOfCode.PuzzleTestCore
             }
         }
 
-        [Fact]
+        [SkippableFact]
         public void Sample1()
         {
             Run(() =>
             {
-                var answer = Puzzle.Sample1();
-
-                if (_expectedSample1.HasValue)
-                {
-                    Assert.Equal(_expectedSample1, answer);
-                }
+                return (_expectedSample1, Puzzle.Sample1());
             });
         }
 
-        [Fact]
+        [SkippableFact]
         public void Sample2()
         {
             Run(() =>
             {
-                var answer = Puzzle.Sample2();
-
-                if (_expectedSample2.HasValue)
-                {
-                    Assert.Equal(_expectedSample2, answer);
-                }
+                return (_expectedSample2, Puzzle.Sample2());
             });
         }
 
-        [Fact]
+        [SkippableFact]
         public void Solution1()
         {
             Run(() =>
             {
-                var answer = Puzzle.Solve1();
-
-                Assert.Equal(_expectedAnswer1, answer);
-                Assert.NotEqual(default, _expectedAnswer1);
+                return (_expectedAnswer1, Puzzle.Solve1());
             });
         }
 
-        [Fact]
+        [SkippableFact]
         public void Solution2()
         {
             Run(() =>
             {
-                var answer = Puzzle.Solve2();
-
-                Assert.Equal(_expectedAnswer2, answer);
-                Assert.NotEqual(default, _expectedAnswer2);
+                return (_expectedAnswer2, Puzzle.Solve2());
             });
         }
     }
