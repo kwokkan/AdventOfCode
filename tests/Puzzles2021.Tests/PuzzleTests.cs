@@ -58,6 +58,14 @@ namespace AdventOfCode.Puzzles2021.Tests
         }
     }
 
+    public class Puzzle8Tests : TestBase<Puzzle8>
+    {
+        public Puzzle8Tests()
+            : base(26, 61229, 301, 908067)
+        {
+        }
+    }
+
     public class Puzzle9Tests : TestBase<Puzzle9>
     {
         public Puzzle9Tests()
