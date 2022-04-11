@@ -9,3 +9,11 @@ public class Puzzle1Tests : TestBase<Puzzle1>
     {
     }
 }
+
+public class Puzzle2Tests : TestBase<Puzzle2>
+{
+    public Puzzle2Tests()
+        : base(43, 14, 1586300, 3737498)
+    {
+    }
+}
