@@ -2,70 +2,74 @@
 using System.Linq;
 using AdventOfCode.PuzzleCore;
 
-namespace AdventOfCode.Puzzles2020
+namespace AdventOfCode.Puzzles2020;
+
+public class Puzzle6 : PuzzleBase
 {
-    public class Puzzle6 : PuzzleBase
+    private record Group
     {
-        private record Group
+        public List<char> Answers { get; init; } = new List<char>();
+
+        public int Count { get; set; }
+    }
+
+    public Puzzle6()
+        : base(2020, 6)
+    {
+    }
+
+    private static IEnumerable<Group> GetGroups(string[] lines)
+    {
+        var group = new Group();
+
+        foreach (var line in lines)
         {
-            public List<char> Answers { get; init; } = new List<char>();
-
-            public int Count { get; set; }
-        }
-
-        private static IEnumerable<Group> GetGroups(string[] lines)
-        {
-            var group = new Group();
-
-            foreach (var line in lines)
+            if (line == string.Empty)
             {
-                if (line == string.Empty)
-                {
-                    yield return group;
+                yield return group;
 
-                    group = new Group();
+                group = new Group();
 
-                    continue;
-                }
-
-                group.Answers.AddRange(line.Select(x => x));
-                group.Count++;
+                continue;
             }
 
-            yield return group;
+            group.Answers.AddRange(line.Select(x => x));
+            group.Count++;
         }
 
-        public override long Solve1()
+        yield return group;
+    }
+
+    public override long Solve1()
+    {
+        var groups = GetGroups(Puzzle6Input.Input).ToList();
+        var allSum = 0;
+
+        foreach (var group in groups)
         {
-            var groups = GetGroups(Puzzle6Input.Input).ToList();
-            var allSum = 0;
+            var distinctGroup = group.Answers.Distinct().Count();
 
-            foreach (var group in groups)
-            {
-                var distinctGroup = group.Answers.Distinct().Count();
-
-                allSum += distinctGroup;
-            }
-
-            return allSum;
+            allSum += distinctGroup;
         }
 
-        public override long Solve2()
+        return allSum;
+    }
+
+    public override long Solve2()
+    {
+        var groups = GetGroups(Puzzle6Input.Input).ToList();
+        var allSum = 0;
+
+        foreach (var group in groups)
         {
-            var groups = GetGroups(Puzzle6Input.Input).ToList();
-            var allSum = 0;
+            var groupedAnswers = group.Answers
+                .GroupBy(x => x)
+                .Select(x => new { Answer = x, Count = x.Count() })
+                .Count(x => x.Count == group.Count);
 
-            foreach (var group in groups)
-            {
-                var groupedAnswers = group.Answers
-                    .GroupBy(x => x)
-                    .Select(x => new { Answer = x, Count = x.Count() })
-                    .Count(x => x.Count == group.Count);
-
-                allSum += groupedAnswers;
-            }
-
-            return allSum;
+            allSum += groupedAnswers;
         }
+
+        return allSum;
     }
 }

@@ -1,88 +1,92 @@
 ﻿using System.Collections.Generic;
 using AdventOfCode.PuzzleCore;
 
-namespace AdventOfCode.Puzzles2020
+namespace AdventOfCode.Puzzles2020;
+
+public class Puzzle15 : PuzzleBase
 {
-    public class Puzzle15 : PuzzleBase
+    public Puzzle15()
+        : base(2020, 15)
     {
-        private static int GetNthNumber(int[] input, int nth)
+    }
+
+    private static int GetNthNumber(int[] input, int nth)
+    {
+        var usedNumbers = new List<int>(nth);
+        usedNumbers.AddRange(input);
+
+        var used = new Dictionary<int, List<int>>();
+
+        var counter = 0;
+        var prevNumber = 0;
+
+        foreach (var item in input)
         {
-            var usedNumbers = new List<int>(nth);
-            usedNumbers.AddRange(input);
-
-            var used = new Dictionary<int, List<int>>();
-
-            var counter = 0;
-            var prevNumber = 0;
-
-            foreach (var item in input)
+            used.Add(item, new List<int>
             {
-                used.Add(item, new List<int>
-                {
-                    counter
-                });
+                counter
+            });
 
-                prevNumber = item;
+            prevNumber = item;
 
-                counter++;
-            }
+            counter++;
+        }
 
-            while (counter < nth)
+        while (counter < nth)
+        {
+            if (used.ContainsKey(prevNumber) && used[prevNumber].Count > 1)
             {
-                if (used.ContainsKey(prevNumber) && used[prevNumber].Count > 1)
+                var prevList = used[prevNumber];
+
+                var prevIndex = prevList[^2];
+
+                var newNum = counter - prevIndex - 1;
+
+                if (used.ContainsKey(newNum))
                 {
-                    var prevList = used[prevNumber];
-
-                    var prevIndex = prevList[^2];
-
-                    var newNum = counter - prevIndex - 1;
-
-                    if (used.ContainsKey(newNum))
-                    {
-                        used[newNum].Add(counter);
-                    }
-                    else
-                    {
-                        used.Add(newNum, new List<int>
-                        {
-                            counter
-                        });
-                    }
-
-                    prevNumber = newNum;
+                    used[newNum].Add(counter);
                 }
                 else
                 {
-                    used[0].Add(counter);
-
-                    prevNumber = 0;
+                    used.Add(newNum, new List<int>
+                    {
+                        counter
+                    });
                 }
 
-                counter++;
+                prevNumber = newNum;
+            }
+            else
+            {
+                used[0].Add(counter);
+
+                prevNumber = 0;
             }
 
-            return prevNumber;
+            counter++;
         }
 
-        public override long Sample1()
-        {
-            var number = GetNthNumber(Puzzle15Input.Sample, 2020);
+        return prevNumber;
+    }
 
-            return number;
-        }
+    public override long Sample1()
+    {
+        var number = GetNthNumber(Puzzle15Input.Sample, 2020);
 
-        public override long Solve1()
-        {
-            var number = GetNthNumber(Puzzle15Input.Input, 2020);
+        return number;
+    }
 
-            return number;
-        }
+    public override long Solve1()
+    {
+        var number = GetNthNumber(Puzzle15Input.Input, 2020);
 
-        public override long Solve2()
-        {
-            var number = GetNthNumber(Puzzle15Input.Input, 30000000);
+        return number;
+    }
 
-            return number;
-        }
+    public override long Solve2()
+    {
+        var number = GetNthNumber(Puzzle15Input.Input, 30000000);
+
+        return number;
     }
 }

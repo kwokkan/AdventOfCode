@@ -3,106 +3,110 @@ using System.Collections.Generic;
 using System.Linq;
 using AdventOfCode.PuzzleCore;
 
-namespace AdventOfCode.Puzzles2020
+namespace AdventOfCode.Puzzles2020;
+
+public class Puzzle7 : PuzzleBase
 {
-    public class Puzzle7 : PuzzleBase
+    private record Bag
     {
-        private record Bag
+        public string Colour { get; init; }
+
+        public IDictionary<string, int> Bags { get; init; } = new Dictionary<string, int>();
+
+        public Bag(string colour)
         {
-            public string Colour { get; init; }
+            Colour = colour;
+        }
+    }
 
-            public IDictionary<string, int> Bags { get; init; } = new Dictionary<string, int>();
+    public Puzzle7()
+        : base(2020, 7)
+    {
+    }
 
-            public Bag(string colour)
-            {
-                Colour = colour;
-            }
+    private static IEnumerable<Bag> GetBags(string[] lines)
+    {
+        for (int i = 0; i < lines.Length; i++)
+        {
+            lines[i] = lines[i]
+                .Replace(" bags", "")
+                .Replace(" bag", "")
+                .Replace(".", "");
         }
 
-        private static IEnumerable<Bag> GetBags(string[] lines)
+        foreach (var line in lines)
         {
-            for (int i = 0; i < lines.Length; i++)
+            var bagLines = line.Split(" contain ");
+
+            var bag = new Bag(bagLines[0]);
+
+            var bagColours = bagLines[1].Split(", ");
+
+            foreach (var colour in bagColours)
             {
-                lines[i] = lines[i]
-                    .Replace(" bags", "")
-                    .Replace(" bag", "")
-                    .Replace(".", "");
-            }
+                var colourCount = colour.Split(" ", 2);
 
-            foreach (var line in lines)
-            {
-                var bagLines = line.Split(" contain ");
-
-                var bag = new Bag(bagLines[0]);
-
-                var bagColours = bagLines[1].Split(", ");
-
-                foreach (var colour in bagColours)
+                if (int.TryParse(colourCount[0], out var bagCount))
                 {
-                    var colourCount = colour.Split(" ", 2);
-
-                    if (int.TryParse(colourCount[0], out var bagCount))
-                    {
-                        bag.Bags.Add(colourCount[1], bagCount);
-                    }
-                }
-
-                yield return bag;
-            }
-        }
-
-        private static void GetParentBags(IEnumerable<Bag> bags, HashSet<string> foundColours, params string[] colours)
-        {
-            var foundBags = bags
-                .Where(x => x.Bags.Keys.Any(key => colours.Contains(key)))
-                .Select(x => x.Colour)
-                .ToArray();
-
-            var hasNewBags = foundBags.Select(x => foundColours.Add(x)).ToList().Any(x => x);
-
-            if (hasNewBags)
-            {
-                GetParentBags(bags, foundColours, foundBags);
-            }
-        }
-
-        private static void GetChildBags(IEnumerable<Bag> bags, ref int counter, params Bag[] parentBags)
-        {
-            foreach (var bag in parentBags)
-            {
-                counter++;
-
-                foreach (var subBag in bag.Bags)
-                {
-                    var repeatBag = bags.First(b => b.Colour == subBag.Key);
-
-                    for (int i = 0; i < subBag.Value; i++)
-                    {
-                        GetChildBags(bags, ref counter, repeatBag);
-                    }
+                    bag.Bags.Add(colourCount[1], bagCount);
                 }
             }
-        }
 
-        public override long Solve1()
+            yield return bag;
+        }
+    }
+
+    private static void GetParentBags(IEnumerable<Bag> bags, HashSet<string> foundColours, params string[] colours)
+    {
+        var foundBags = bags
+            .Where(x => x.Bags.Keys.Any(key => colours.Contains(key)))
+            .Select(x => x.Colour)
+            .ToArray();
+
+        var hasNewBags = foundBags.Select(x => foundColours.Add(x)).ToList().Any(x => x);
+
+        if (hasNewBags)
         {
-            var bags = GetBags(Puzzle7Input.Input).ToList();
-            var foundColours = new HashSet<string>();
-
-            GetParentBags(bags, foundColours, "shiny gold");
-
-            return foundColours.Count;
+            GetParentBags(bags, foundColours, foundBags);
         }
+    }
 
-        public override long Solve2()
+    private static void GetChildBags(IEnumerable<Bag> bags, ref int counter, params Bag[] parentBags)
+    {
+        foreach (var bag in parentBags)
         {
-            var bags = GetBags(Puzzle7Input.Input).ToList();
-            var foundColours = 0;
-            var startingBag = bags.Where(x => x.Colour == "shiny gold").ToArray();
+            counter++;
 
-            GetChildBags(bags, ref foundColours, startingBag);
+            foreach (var subBag in bag.Bags)
+            {
+                var repeatBag = bags.First(b => b.Colour == subBag.Key);
 
-            return foundColours - startingBag.Length;
+                for (int i = 0; i < subBag.Value; i++)
+                {
+                    GetChildBags(bags, ref counter, repeatBag);
+                }
+            }
         }
+    }
+
+    public override long Solve1()
+    {
+        var bags = GetBags(Puzzle7Input.Input).ToList();
+        var foundColours = new HashSet<string>();
+
+        GetParentBags(bags, foundColours, "shiny gold");
+
+        return foundColours.Count;
+    }
+
+    public override long Solve2()
+    {
+        var bags = GetBags(Puzzle7Input.Input).ToList();
+        var foundColours = 0;
+        var startingBag = bags.Where(x => x.Colour == "shiny gold").ToArray();
+
+        GetChildBags(bags, ref foundColours, startingBag);
+
+        return foundColours - startingBag.Length;
     }
 }

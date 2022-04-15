@@ -33,10 +33,6 @@
             return lines.ToArray();
         }
 
-        public PuzzleBase()
-        {
-        }
-
         public PuzzleBase(int year, int day)
         {
             _year = year;
