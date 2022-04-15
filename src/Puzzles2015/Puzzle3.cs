@@ -74,6 +74,7 @@ public class Puzzle3 : PuzzleBase
         return points.Count;
     }
 
+    public override long ExpectedSample1 => 2;
     public override long Sample1()
     {
         var input = GetSampleString()[0];
@@ -81,6 +82,7 @@ public class Puzzle3 : PuzzleBase
         return Calculate1(input);
     }
 
+    public override long ExpectedSample2 => 11;
     public override long Sample2()
     {
         var input = GetSampleString()[0];
@@ -88,6 +90,7 @@ public class Puzzle3 : PuzzleBase
         return Calculate2(input);
     }
 
+    public override long ExpectedAnswer1 => 2565;
     public override long Solve1()
     {
         var input = GetInputString()[0];
@@ -95,6 +98,7 @@ public class Puzzle3 : PuzzleBase
         return Calculate1(input);
     }
 
+    public override long ExpectedAnswer2 => 2639;
     public override long Solve2()
     {
         var input = GetInputString()[0];

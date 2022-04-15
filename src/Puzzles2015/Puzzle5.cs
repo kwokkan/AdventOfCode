@@ -70,6 +70,7 @@ public class Puzzle5 : PuzzleBase
         return count;
     }
 
+    public override long ExpectedSample1 => 2;
     public override long Sample1()
     {
         var input = GetSampleString();
@@ -77,6 +78,7 @@ public class Puzzle5 : PuzzleBase
         return Calculate1(input);
     }
 
+    public override long ExpectedAnswer1 => 255;
     public override long Solve1()
     {
         var input = GetInputString();

@@ -61,6 +61,7 @@ public class Puzzle2 : PuzzleBase
         return total;
     }
 
+    public override long ExpectedSample1 => 43;
     public override long Sample1()
     {
         var input = GetSampleString();
@@ -68,6 +69,7 @@ public class Puzzle2 : PuzzleBase
         return Calculate1(input);
     }
 
+    public override long ExpectedSample2 => 14;
     public override long Sample2()
     {
         var input = GetSampleString();
@@ -75,6 +77,7 @@ public class Puzzle2 : PuzzleBase
         return Calculate2(input);
     }
 
+    public override long ExpectedAnswer1 => 1586300;
     public override long Solve1()
     {
         var input = GetInputString();
@@ -82,6 +85,7 @@ public class Puzzle2 : PuzzleBase
         return Calculate1(input);
     }
 
+    public override long ExpectedAnswer2 => 3737498;
     public override long Solve2()
     {
         var input = GetInputString();

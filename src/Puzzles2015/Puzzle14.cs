@@ -50,6 +50,7 @@ public class Puzzle14 : PuzzleBase
         return distances.Max();
     }
 
+    public override long ExpectedSample1 => 1120;
     public override long Sample1()
     {
         var input = GetSampleString();
@@ -57,6 +58,7 @@ public class Puzzle14 : PuzzleBase
         return Calculate1(input, 1000);
     }
 
+    public override long ExpectedAnswer1 => 2655;
     public override long Solve1()
     {
         var input = GetInputString();
