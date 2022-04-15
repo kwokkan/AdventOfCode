@@ -33,3 +33,11 @@ public class Puzzle4Tests : TestBase<Puzzle4>
     {
     }
 }
+
+public class Puzzle5Tests : TestBase<Puzzle5>
+{
+    public Puzzle5Tests()
+        : base(2, null, 255, 0)
+    {
+    }
+}
