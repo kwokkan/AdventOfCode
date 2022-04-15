@@ -43,6 +43,11 @@
             _day = day;
         }
 
+        public virtual long ExpectedSample1 => throw new NotImplementedException($"{nameof(ExpectedSample1)} not implemented.");
+        public virtual long ExpectedSample2 => throw new NotImplementedException($"{nameof(ExpectedSample2)} not implemented.");
+        public virtual long ExpectedAnswer1 => throw new NotImplementedException($"{nameof(ExpectedAnswer1)} not implemented.");
+        public virtual long ExpectedAnswer2 => throw new NotImplementedException($"{nameof(ExpectedAnswer2)} not implemented.");
+
         protected string[] GetSampleString(bool appendBlankLine = false)
         {
             return GetFile(_day, "sample", appendBlankLine: appendBlankLine);

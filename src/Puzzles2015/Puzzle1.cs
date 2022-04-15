@@ -16,7 +16,7 @@ public class Puzzle1 : PuzzleBase
 
     private static long Calculate2(string input)
     {
-        var currrent = 0;
+        var current = 0;
         var position = 0;
 
         foreach (var dir in input)
@@ -26,16 +26,16 @@ public class Puzzle1 : PuzzleBase
             switch (dir)
             {
                 case '(':
-                    currrent++;
+                    current++;
                     break;
                 case ')':
-                    currrent--;
+                    current--;
                     break;
                 default:
                     break;
             }
 
-            if (currrent == -1)
+            if (current == -1)
             {
                 return position;
             }
@@ -44,6 +44,7 @@ public class Puzzle1 : PuzzleBase
         return position;
     }
 
+    public override long ExpectedSample1 => -3;
     public override long Sample1()
     {
         var input = GetSampleString()[0];
@@ -51,6 +52,7 @@ public class Puzzle1 : PuzzleBase
         return Calculate1(input);
     }
 
+    public override long ExpectedSample2 => 1;
     public override long Sample2()
     {
         var input = GetSampleString()[0];
@@ -58,6 +60,7 @@ public class Puzzle1 : PuzzleBase
         return Calculate2(input);
     }
 
+    public override long ExpectedAnswer1 => 280;
     public override long Solve1()
     {
         var input = GetInputString()[0];
@@ -65,6 +68,7 @@ public class Puzzle1 : PuzzleBase
         return Calculate1(input);
     }
 
+    public override long ExpectedAnswer2 => 1797;
     public override long Solve2()
     {
         var input = GetInputString()[0];
