@@ -12,4 +12,6 @@ public class Puzzle4Tests : TestBase<Puzzle4> { }
 
 public class Puzzle5Tests : TestBase<Puzzle5> { }
 
+public class Puzzle12Tests : TestBase<Puzzle12> { }
+
 public class Puzzle14Tests : TestBase<Puzzle14> { }
