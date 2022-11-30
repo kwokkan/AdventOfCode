@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App", "App\App.csproj", "{3B2A24F0-0840-41C1-809E-449D3FC5A23E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2021", "src\Puzzles2021\Puzzles2021.csproj", "{74F49226-5551-4F63-AFE6-7EDBD1C53CF6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36E85DD1-BFAC-4B51-8979-E4E8ADA75F2E}"
@@ -21,25 +19,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2020", "src\Puzzles2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2020.Tests", "tests\Puzzles2020.Tests\Puzzles2020.Tests.csproj", "{07DD50D8-87E4-435C-9BC2-1D4556403EFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2015", "src\Puzzles2015\Puzzles2015.csproj", "{9535B314-CBDA-4393-ACEA-13A49D57AC3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2015", "src\Puzzles2015\Puzzles2015.csproj", "{9535B314-CBDA-4393-ACEA-13A49D57AC3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2015.Tests", "tests\Puzzles2015.Tests\Puzzles2015.Tests.csproj", "{84DDFA07-FB61-411F-9DB2-C030326B9886}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2015.Tests", "tests\Puzzles2015.Tests\Puzzles2015.Tests.csproj", "{84DDFA07-FB61-411F-9DB2-C030326B9886}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2016", "src\Puzzles2016\Puzzles2016.csproj", "{986EC9A4-8398-428F-A352-0D1A0F4B4B69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2016", "src\Puzzles2016\Puzzles2016.csproj", "{986EC9A4-8398-428F-A352-0D1A0F4B4B69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2016.Tests", "tests\Puzzles2016.Tests\Puzzles2016.Tests.csproj", "{09E8AC73-6C03-4993-8E3D-B955947C8718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2016.Tests", "tests\Puzzles2016.Tests\Puzzles2016.Tests.csproj", "{09E8AC73-6C03-4993-8E3D-B955947C8718}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2017", "src\Puzzles2017\Puzzles2017.csproj", "{456CD891-EDA8-4D04-B356-CDC474D7A4EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2017", "src\Puzzles2017\Puzzles2017.csproj", "{456CD891-EDA8-4D04-B356-CDC474D7A4EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2017.Tests", "tests\Puzzles2017.Tests\Puzzles2017.Tests.csproj", "{E35AB7E3-F9F4-4901-8E5E-80DF15236D50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2017.Tests", "tests\Puzzles2017.Tests\Puzzles2017.Tests.csproj", "{E35AB7E3-F9F4-4901-8E5E-80DF15236D50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2018", "src\Puzzles2018\Puzzles2018.csproj", "{6A56155C-8FDB-4F8B-B4FC-983A60A14802}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2018", "src\Puzzles2018\Puzzles2018.csproj", "{6A56155C-8FDB-4F8B-B4FC-983A60A14802}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2018.Tests", "tests\Puzzles2018.Tests\Puzzles2018.Tests.csproj", "{45BEC7A5-EFC5-4E27-808B-2FE62E5DA04F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2018.Tests", "tests\Puzzles2018.Tests\Puzzles2018.Tests.csproj", "{45BEC7A5-EFC5-4E27-808B-2FE62E5DA04F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2019", "src\Puzzles2019\Puzzles2019.csproj", "{B54D98D7-C4F2-48B8-8921-E1F14A0E35EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2019", "src\Puzzles2019\Puzzles2019.csproj", "{B54D98D7-C4F2-48B8-8921-E1F14A0E35EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puzzles2019.Tests", "tests\Puzzles2019.Tests\Puzzles2019.Tests.csproj", "{C9236B1F-3490-4E07-BF9C-08E55B78A6B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puzzles2019.Tests", "tests\Puzzles2019.Tests\Puzzles2019.Tests.csproj", "{C9236B1F-3490-4E07-BF9C-08E55B78A6B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +45,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3B2A24F0-0840-41C1-809E-449D3FC5A23E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B2A24F0-0840-41C1-809E-449D3FC5A23E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B2A24F0-0840-41C1-809E-449D3FC5A23E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B2A24F0-0840-41C1-809E-449D3FC5A23E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{74F49226-5551-4F63-AFE6-7EDBD1C53CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74F49226-5551-4F63-AFE6-7EDBD1C53CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74F49226-5551-4F63-AFE6-7EDBD1C53CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
