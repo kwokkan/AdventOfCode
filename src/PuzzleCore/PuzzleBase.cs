@@ -7,9 +7,15 @@
 
         private static string[] GetFile(int day, string type, bool appendBlankLine = false)
         {
-            var path = $"inputs/{day}-{type}.txt";
+            var path = $"inputs/{day:D2}-{type}.txt";
 
             var file = new FileInfo(path);
+
+            if (!file.Exists)
+            {
+                path = $"inputs/{day}-{type}.txt";
+                file = new FileInfo(path);
+            }
 
             if (!file.Exists)
             {
